@@ -1,0 +1,100 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[catalan]{babel} % Patrons de trencament de paraula
+\usepackage{fancyhdr} % Per la capçalera
+\usepackage{geometry}
+\usepackage{graphicx} % Per importar logos (i altres gràfics)
+\usepackage[colorlinks,linkcolor=black]{hyperref} % Per fer que l'index tingui hiperlinks en el pdf
+\usepackage{indentfirst}
+\usepackage[skip=10pt,indent=2em]{parskip} % espai entre paràgrafs i indentació
+\usepackage[sc,small]{titlesec} % Seccions personalitzades
+
+%% Títols
+\newcommand{\modulnum}{2}
+\newcommand{\modulnom}{Gestió de Bases de Dades}
+
+\newcommand{\ufnum}{1}
+\newcommand{\ufnom}{Introducció a les Bases de Dades}
+
+\newcommand{\acttipus}{Prova Escrita 1}
+\newcommand{\actnom}{Empresa de Transport Internacional}
+
+%% Entreliniats
+\linespread{1.5}
+
+%% Capçalera
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+\addtolength{\topmargin}{-20pt}
+\fancyhead[L]{\includegraphics*[height=35pt]{provencana_bw.pdf}}
+\fancyhead[R]{
+	{\scshape\scriptsize Mòdul \modulnum: \modulnom}\\
+	{\scshape\footnotesize \acttipus \space  - \actnom}\\
+	{\scshape\small Eina Coma Bages}}
+
+\addtolength{\textheight}{2cm}
+
+%% Comandes personalitzades
+\newcommand{\mygraphic}[2][width=0.9\textwidth]{\begin{center}
+		\centering\includegraphics[#1]{#2}\par
+\end{center}}
+
+\renewcommand{\contentsname}{Índex}
+
+\begin{document}
+\include{portada.tex}
+
+\tableofcontents
+\newpage
+\section{Diagrama Entitat-Relació}
+\begin{center}
+	\noindent\includegraphics[width=\textwidth]{diagrama.pdf}
+\end{center}
+
+\newpage
+\section{Transformació relacional}
+
+
+DELEGACIÓ(\underline{nom\_delegació}, nom\_ciutat, telèfon) \\
+on \{nom\_ciutat\} referencia CIUTAT
+
+CIUTAT(\underline{nom\_ciutat})
+
+DATA(\underline{data})
+
+CLIENT(\underline{codi\_client}, nom, telèfon)
+
+CAMIÓ(\underline{codi\_camió}, matrícula, tara, marca)
+
+EMPLEAT(\underline{codi\_empleat}, nom, telèfon, any\_naixement)
+
+CONDUCTOR(\underline{codi\_empleat}, any\_carnet, tipus\_carnet) \\
+on \{codi\_empleat\} referencia EMPLEAT
+
+ADMINISTRATIU(\underline{codi\_empleat}, nivell\_estudis) \\
+on \{codi\_empleat\} referencia EMPLEAT
+
+VIATGE(\underline{codi\_delegació}, \underline{codi\_viatge}, codi\_camió) \\
+on \{codi\_delegació\} referencia DELEGACIÓ \\ 
+on \{codi\_camió\} referencia CAMIÓ
+
+ASSIGNACIÓ(\underline{codi\_empleat}, \underline{data}, codi\_delegació, fi\_assignació) \\
+on \{codi\_empleat\} referencia EMPLEAT, \\
+on \{data\} referencia DATA, \\
+on \{codi\_delegació\} referencia DELEGACIÓ
+
+FA(\underline{codi\_empleat}, \underline{codi\_delegació}, \underline{codi\_viatge}, import\_dietes) \\
+on \{codi\_empleat\} referencia CONDUCTOR, \\
+on \{codi\_viatge, codi\_delegació\} referencia VIATGE
+
+PARADA(\underline{codi\_ciutat}, \underline{codi\_delegació}, \underline{codi\_viatge}, data\_arribada, hora\_arribada) \\
+on \{codi\_ciutat\} referencia CIUTAT, \\
+on \{codi\_viatge, codi\_delegació\} referencia VIATGE
+
+REPARTICIÓ(\underline{codi\_ciutat}, \underline{codi\_delegació}, \underline{codi\_viatge}, \underline{codi\_client} paq\_carrgats, paq\_descarregats) \\
+on \{codi\_ciutat, codi\_viatge, codi\_delegació\} referencia PARADA \\
+on \{codi\_client\} referencia CLIENT
+
+
+\end{document}
