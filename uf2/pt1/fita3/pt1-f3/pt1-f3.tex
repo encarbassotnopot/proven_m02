@@ -1,0 +1,78 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[spanish]{babel} % Patrons de trencament de paraula
+\usepackage{fancyhdr} % Per la capçalera
+\usepackage{geometry}
+\usepackage{graphicx} % Per importar logos (i altres gràfics)
+\usepackage[colorlinks,linkcolor=black]{hyperref} % Per fer que l'index tingui hiperlinks en el pdf
+\usepackage{indentfirst}
+\usepackage[sc,small]{titlesec} % Seccions personalitzades
+
+%% Títols
+\newcommand{\modulnum}{2}
+\newcommand{\modulnom}{Bases de Dades}
+
+\newcommand{\ufnum}{2}
+\newcommand{\ufnom}{Llenguatges SQL: DML i DDL}
+
+\newcommand{\acttipus}{Pràctica 1 - Fita 3}
+\newcommand{\actnom}{SQL Mistery - Construir la base de dades}
+
+%% Entreliniats
+\linespread{1.5}
+
+%% Capçalera
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+\addtolength{\topmargin}{-20pt}
+\fancyhead[L]{\includegraphics*[height=35pt]{provencana_bw.pdf}}
+\fancyhead[R]{
+	{\scshape\scriptsize Mòdul \modulnum: \modulnom}\\
+	{\scshape\footnotesize \acttipus \space  - \actnom}\\
+	{\scshape\small Eina Coma Bages}}
+
+\addtolength{\textheight}{2cm}
+
+%% Comandes personalitzades
+\newcommand{\mygraphic}[2][width=\textwidth]{\begin{center}
+		\centering\includegraphics[#1]{#2}\par
+\end{center}}
+
+\renewcommand{\contentsname}{Índex}
+
+\begin{document}
+\include{portada.tex}
+
+\section{Càrrega i execució de l'script}
+Premem upload i s'obre una finestra emergent per carregar el nostre script.
+\mygraphic{imatges/1.png}
+
+Seleccionem el fitxer i el pengem.
+\mygraphic{imatges/2.png}
+
+\newpage
+Una vegada penjat, el podem executar.
+\mygraphic{imatges/3.png}
+
+Ens adverteix del que volem fer, i si efectivament volem executar-lo, premem el botó.
+\mygraphic{imatges/4.png}
+
+\newpage
+La primera execució acaba amb deu errors, causats pels drops de taules que encara no existeixen.
+\mygraphic{imatges/5.png}
+
+Si tornem a la pantalla principal i repetim el mateix procediment, veurem que les execucions posteriors acaben sense cap error.
+\mygraphic{imatges/6.png}
+\mygraphic{imatges/7.png}
+\mygraphic{imatges/8.png}
+
+\section{Comprovació des de ll'Object Browser}
+\mygraphic{imatges/9.png}
+\mygraphic{imatges/10.png}
+
+\section{Comprovació amb Queries}
+\mygraphic{imatges/11.png}
+\mygraphic{imatges/12.png}
+
+\end{document}

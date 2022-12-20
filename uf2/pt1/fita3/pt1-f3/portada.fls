@@ -1,0 +1,6 @@
+PWD /home/eina/Desktop/m01/uf1/nf2/pt4-2
+INPUT /usr/local/texlive/2022/texmf.cnf
+INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/latex.fmt
+INPUT portada.tex
+OUTPUT portada.log
