@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[spanish]{babel} % Patrons de trencament de paraula
+\usepackage{fancyhdr} % Per la capçalera
+\usepackage{geometry}
+\usepackage{graphicx} % Per importar logos (i altres gràfics)
+\usepackage[colorlinks,linkcolor=black]{hyperref} % Per fer que l'index tingui hiperlinks en el pdf
+\usepackage{indentfirst}
+\usepackage[sc,small]{titlesec} % Seccions personalitzades
+
+%% Títols
+\newcommand{\modulnum}{2}
+\newcommand{\modulnom}{Bases de Dades}
+
+\newcommand{\ufnum}{2}
+\newcommand{\ufnom}{Llenguatges SQL: DML i DDL}
+
+\newcommand{\acttipus}{SQL Mistery}
+\newcommand{\actnom}{La Caixa Forta de la Mort}
+
+%% Entreliniats
+\linespread{1.5}
+
+%% Capçalera
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+\addtolength{\topmargin}{-20pt}
+\fancyhead[L]{\includegraphics*[height=35pt]{provencana_bw.pdf}}
+\fancyhead[R]{
+	{\scshape\scriptsize Mòdul \modulnum: \modulnom}\\
+	{\scshape\footnotesize \acttipus \space  - \actnom}\\
+	{\scshape\small Pirates del Carib}}
+
+\addtolength{\textheight}{2cm}
+
+%% Comandes personalitzades
+\newcommand{\mygraphic}[2][width=\textwidth]{\begin{center}
+		\centering\includegraphics[#1]{#2}\par
+\end{center}}
+
+\renewcommand{\contentsname}{Índex}
+
+\begin{document}
+\include{portada.tex}
+Cada divendres a les 15 hores, una empresa obre la seva caixa forta per fer un recompte dels diners.
+
+El divendres 18 de març del 2022, en un recompte ordinari, van descobrir que faltava una bona part dels diners.
+
+Sospiten dels empleats, ja que ningú aliè a l'empresa va accedir a l'edifici. \textbf{Qui ha comès el robatori?}
+
+\end{document}

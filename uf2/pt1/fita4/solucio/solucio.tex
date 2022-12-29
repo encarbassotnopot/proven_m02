@@ -1,0 +1,127 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[spanish]{babel} % Patrons de trencament de paraula
+\usepackage{fancyhdr} % Per la capçalera
+\usepackage{geometry}
+\usepackage{graphicx} % Per importar logos (i altres gràfics)
+\usepackage[colorlinks,linkcolor=black]{hyperref} % Per fer que l'index tingui hiperlinks en el pdf
+\usepackage{indentfirst}
+\usepackage[sc,small]{titlesec} % Seccions personalitzades
+
+%% Títols
+\newcommand{\modulnum}{2}
+\newcommand{\modulnom}{Bases de Dades}
+
+\newcommand{\ufnum}{2}
+\newcommand{\ufnom}{Llenguatges SQL: DML i DDL}
+
+\newcommand{\acttipus}{Pràctica 1 - Fita 4}
+\newcommand{\actnom}{Solució - La Caixa Forta de la Mort}
+
+%% Entreliniats
+\linespread{1.5}
+
+%% Capçalera
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+\addtolength{\topmargin}{-20pt}
+\fancyhead[L]{\includegraphics*[height=35pt]{provencana_bw.pdf}}
+\fancyhead[R]{
+	{\scshape\scriptsize Mòdul \modulnum: \modulnom}\\
+	{\scshape\footnotesize \acttipus \space  - \actnom}\\
+	{\scshape\small Eina Coma Bages}}
+
+\addtolength{\textheight}{2cm}
+
+%% Comandes personalitzades
+\newcommand{\mygraphic}[2][width=\textwidth]{\begin{center}
+		\centering\includegraphics[#1]{#2}\par
+\end{center}}
+
+\renewcommand{\contentsname}{Índex}
+
+\begin{document}
+\include{portada.tex}
+\tableofcontents
+
+\newpage
+\section{Informació inicial}
+Cada divendres a les 15h es revisa el contingut de la caixa forta i el robatori es va descobrir el divendres 18/03/2022.
+
+D'aquí deduïm que el robatori s'ha dut a terme entre el divendres anterior (11/03) i aquest (18/03)
+
+\newpage
+\section{Primer pas}
+\subsection{Query}
+\mygraphic{imatges/1a.png}
+\subsection{Resultats}
+\mygraphic{imatges/1b.png}
+\subsection{Dades obtingudes}
+Hi ha una entrada sospitosa la matinada del 16 de març. Sembla que algú ha esborrat el vídeo de la càmera de vigilància.
+\subsection{Següent pas}
+Hem de trobar qui va ser l'última persona que ha accedit a l'edifici abans del robatori. Aquesta informació la podem trobar a la taula d'accessos.
+
+\newpage
+\section{Segon pas}
+\subsection{Query}
+\mygraphic{imatges/2a.png}
+\subsection{Resultats}
+\mygraphic{imatges/2b.png}
+\subsection{Dades obtingudes}
+Ja sabem amb quina clau es va entrar abans del robatori.
+\subsection{Següent pas}
+Ara hem de saber de qui era aquesta clau, amb la taula poseeix.
+
+\newpage
+\section{Tercer pas}
+\subsection{Query}
+\mygraphic{imatges/3a.png}
+\subsection{Resultats}
+\mygraphic{imatges/3b.png}
+\subsection{Dades obtingudes}
+La clau era de la Tamara, amb l'id 18, però va ser desactivada poc després.
+\subsection{Següent pas}
+Investiguem si la Tamara va tenir cap problema amb la clau. Ho farem buscant a la taula dels tiquets.
+
+\newpage
+\section{Quart pas}
+\subsection{Query}
+\mygraphic{imatges/4a.png}
+\subsection{Resultats}
+\mygraphic{imatges/4b.png}
+\subsection{Dades obtingudes}
+Veiem els tiquets que ha obert la Tamara. Va perdre la clau abans del robatori. Uns dies més tard, l'Oliver la va trobar en un Seat blau.
+\subsection{Següent pas}
+Hem d'esbrinar qui va agafar aquest cotxe abans que ho fes l'Oliver. Aquesta persona és qui va prendre la clau a la Tamara i després se la va deixar allà.
+
+\newpage
+\section{Cinquè pas}
+\subsection{Query}
+\mygraphic{imatges/5a.png}
+\subsection{Resultats}
+\mygraphic{imatges/5b.png}
+\subsection{Dades obtingudes}
+Abans però, obtenim l'id de l'Oliver.
+\subsection{Següent pas}
+Amb aquesta dada, ja podem buscar qui va agafar el Seat blau abans que ho fes ell.
+
+\newpage
+\section{Sisè pas - Solució}
+\subsection{Query}
+\mygraphic{imatges/6a.png}
+\subsection{Resultats}
+\mygraphic{imatges/6b.png}
+\subsection{Dades obtingudes}
+I ja hem resolt el misteri. L'empleat que va robar la clau de la Tamara, va emportar-se els diners de la caixa forta i es va deixar la clau al cotxe va ser en Preston Harding.
+
+\newpage
+\section{Aprenentatges}
+Amb aquesta pràctica he:
+\begin{enumerate}
+	\item Après a generar dades a l'engròs,
+	\item Consolidat els coneixements de DDL i
+	\item Vist com es crea una base de dades, partint d'un disseny conceptual amb el diagrama ER, aplicant la transformació relacional i finalment convertint això a SQL.
+\end{enumerate}
+
+\end{document}
