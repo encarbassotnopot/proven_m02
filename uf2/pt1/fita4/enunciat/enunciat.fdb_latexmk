@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1672319396 "/home/eina/Desktop/cicle/m02/uf2/pt1/fita4/enunciat/enunciat.tex" "enunciat.pdf" "enunciat" 1672319397
-  "/home/eina/Desktop/cicle/m02/uf2/pt1/fita4/enunciat/enunciat.tex" 1672319396 1630 9de0b347fad944bf2399da262caea566 ""
+["pdflatex"] 1673298033 "/home/eina/Desktop/cicle/m02/uf2/pt1/fita4/enunciat/enunciat.tex" "enunciat.pdf" "enunciat" 1673298033
+  "/home/eina/Desktop/cicle/m02/uf2/pt1/fita4/enunciat/enunciat.tex" 1673298032 1658 2e68e3c77a2b0e6a5584a07e3e75ff61 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1650183167 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1650183167 1300 63a6111ee6274895728663cf4b4e7e81 ""
@@ -67,11 +67,11 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1667929250 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1667929244 2927665 17fb60fe61f2f0f471327b506a1b7b5a ""
-  "enunciat.aux" 1672319397 869 33838ec23e850ea727454625202ae59e "pdflatex"
+  "enunciat.aux" 1673298033 869 33838ec23e850ea727454625202ae59e "pdflatex"
   "enunciat.out" 0 -1 0 "pdflatex"
-  "enunciat.tex" 1672319396 1630 9de0b347fad944bf2399da262caea566 ""
-  "portada.aux" 1672319397 575 210446a4853df118efc1d04cbe667bff "pdflatex"
-  "portada.tex" 1672160980 518 ab151a964a622442a51f7d7483a60787 ""
+  "enunciat.tex" 1673298032 1658 2e68e3c77a2b0e6a5584a07e3e75ff61 ""
+  "portada.aux" 1673298033 575 210446a4853df118efc1d04cbe667bff "pdflatex"
+  "portada.tex" 1673298024 510 5339f4f528bdb25dbb1e0e319b343a87 ""
   "provencana_bw.pdf" 1672160980 6596 6fe93f860bb5a9567dd813e77cf54ed9 ""
   "provencana_color.pdf" 1672160980 6639 cf0d10d8632fe44340b3ed183771c02a ""
   (generated)

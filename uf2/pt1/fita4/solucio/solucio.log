@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.8)  29 DEC 2022 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.8)  9 JAN 2023 22:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -215,26 +215,26 @@ LaTeX Info: Redefining \% on input line 26.
 )
 \openout1 = `solucio.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Info: Redefining \. on input line 44.
-LaTeX Info: Redefining \% on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Info: Redefining \. on input line 47.
+LaTeX Info: Redefining \% on input line 47.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -301,7 +301,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 )
-Package hyperref Info: Link coloring ON on input line 44.
+Package hyperref Info: Link coloring ON on input line 47.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -311,9 +311,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count282
 )
-LaTeX Info: Redefining \ref on input line 44.
-LaTeX Info: Redefining \pageref on input line 44.
-LaTeX Info: Redefining \nameref on input line 44.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
  (./solucio.out) (./solucio.out)
 \@outlinefile=\write3
 \openout3 = `solucio.out'.
@@ -357,107 +357,107 @@ l.28 ...ine {7}Sisè pas - Solució}{9}{section.7}
 
 File: provencana_bw.pdf Graphic file (type pdf)
 <use provencana_bw.pdf>
-Package pdftex.def Info: provencana_bw.pdf  used on input line 48.
+Package pdftex.def Info: provencana_bw.pdf  used on input line 51.
 (pdftex.def)             Requested size: 34.99301pt x 35.0pt.
  [2]
 File: provencana_bw.pdf Graphic file (type pdf)
 <use provencana_bw.pdf>
-Package pdftex.def Info: provencana_bw.pdf  used on input line 54.
+Package pdftex.def Info: provencana_bw.pdf  used on input line 57.
 (pdftex.def)             Requested size: 34.99301pt x 35.0pt.
  [3]
 <imatges/1a.png, id=194, 1005.7575pt x 304.13625pt>
 File: imatges/1a.png Graphic file (type png)
 <use imatges/1a.png>
-Package pdftex.def Info: imatges/1a.png  used on input line 57.
+Package pdftex.def Info: imatges/1a.png  used on input line 60.
 (pdftex.def)             Requested size: 418.25368pt x 126.47406pt.
 <imatges/1b.png, id=196, 852.18375pt x 241.90375pt>
 File: imatges/1b.png Graphic file (type png)
 <use imatges/1b.png>
-Package pdftex.def Info: imatges/1b.png  used on input line 59.
+Package pdftex.def Info: imatges/1b.png  used on input line 62.
 (pdftex.def)             Requested size: 418.25368pt x 118.72949pt.
 File: provencana_bw.pdf Graphic file (type pdf)
 <use provencana_bw.pdf>
-Package pdftex.def Info: provencana_bw.pdf  used on input line 65.
+Package pdftex.def Info: provencana_bw.pdf  used on input line 68.
 (pdftex.def)             Requested size: 34.99301pt x 35.0pt.
  [4 <./imatges/1a.png> <./imatges/1b.png>]
 <imatges/2a.png, id=205, 1005.7575pt x 332.24126pt>
 File: imatges/2a.png Graphic file (type png)
 <use imatges/2a.png>
-Package pdftex.def Info: imatges/2a.png  used on input line 68.
+Package pdftex.def Info: imatges/2a.png  used on input line 71.
 (pdftex.def)             Requested size: 418.25368pt x 138.16144pt.
 <imatges/2b.png, id=206, 852.18375pt x 176.66pt>
 File: imatges/2b.png Graphic file (type png)
 <use imatges/2b.png>
-Package pdftex.def Info: imatges/2b.png  used on input line 70.
+Package pdftex.def Info: imatges/2b.png  used on input line 73.
 (pdftex.def)             Requested size: 418.25368pt x 86.70702pt.
 File: provencana_bw.pdf Graphic file (type pdf)
 <use provencana_bw.pdf>
-Package pdftex.def Info: provencana_bw.pdf  used on input line 76.
+Package pdftex.def Info: provencana_bw.pdf  used on input line 79.
 (pdftex.def)             Requested size: 34.99301pt x 35.0pt.
  [5 <./imatges/2a.png> <./imatges/2b.png>]
 <imatges/3a.png, id=215, 1005.7575pt x 293.095pt>
 File: imatges/3a.png Graphic file (type png)
 <use imatges/3a.png>
-Package pdftex.def Info: imatges/3a.png  used on input line 79.
+Package pdftex.def Info: imatges/3a.png  used on input line 82.
 (pdftex.def)             Requested size: 418.25368pt x 121.8826pt.
 <imatges/3b.png, id=216, 852.18375pt x 218.8175pt>
 File: imatges/3b.png Graphic file (type png)
 <use imatges/3b.png>
-Package pdftex.def Info: imatges/3b.png  used on input line 81.
+Package pdftex.def Info: imatges/3b.png  used on input line 84.
 (pdftex.def)             Requested size: 418.25368pt x 107.39847pt.
 File: provencana_bw.pdf Graphic file (type pdf)
 <use provencana_bw.pdf>
-Package pdftex.def Info: provencana_bw.pdf  used on input line 87.
+Package pdftex.def Info: provencana_bw.pdf  used on input line 90.
 (pdftex.def)             Requested size: 34.99301pt x 35.0pt.
  [6 <./imatges/3a.png> <./imatges/3b.png>]
 <imatges/4a.png, id=226, 1005.7575pt x 287.0725pt>
 File: imatges/4a.png Graphic file (type png)
 <use imatges/4a.png>
-Package pdftex.def Info: imatges/4a.png  used on input line 90.
+Package pdftex.def Info: imatges/4a.png  used on input line 93.
 (pdftex.def)             Requested size: 418.25368pt x 119.37816pt.
 <imatges/4b.png, id=227, 852.18375pt x 256.96pt>
 File: imatges/4b.png Graphic file (type png)
 <use imatges/4b.png>
-Package pdftex.def Info: imatges/4b.png  used on input line 92.
+Package pdftex.def Info: imatges/4b.png  used on input line 95.
 (pdftex.def)             Requested size: 418.25368pt x 126.1193pt.
 File: provencana_bw.pdf Graphic file (type pdf)
 <use provencana_bw.pdf>
-Package pdftex.def Info: provencana_bw.pdf  used on input line 98.
+Package pdftex.def Info: provencana_bw.pdf  used on input line 101.
 (pdftex.def)             Requested size: 34.99301pt x 35.0pt.
  [7 <./imatges/4a.png> <./imatges/4b.png>]
 <imatges/5a.png, id=236, 851.18pt x 242.9075pt>
 File: imatges/5a.png Graphic file (type png)
 <use imatges/5a.png>
-Package pdftex.def Info: imatges/5a.png  used on input line 101.
+Package pdftex.def Info: imatges/5a.png  used on input line 104.
 (pdftex.def)             Requested size: 418.25368pt x 119.36299pt.
 <imatges/5b.png, id=237, 852.18375pt x 170.6375pt>
 File: imatges/5b.png Graphic file (type png)
 <use imatges/5b.png>
-Package pdftex.def Info: imatges/5b.png  used on input line 103.
+Package pdftex.def Info: imatges/5b.png  used on input line 106.
 (pdftex.def)             Requested size: 418.25368pt x 83.75108pt.
 File: provencana_bw.pdf Graphic file (type pdf)
 <use provencana_bw.pdf>
-Package pdftex.def Info: provencana_bw.pdf  used on input line 109.
+Package pdftex.def Info: provencana_bw.pdf  used on input line 112.
 (pdftex.def)             Requested size: 34.99301pt x 35.0pt.
  [8 <./imatges/5a.png> <./imatges/5b.png>]
 <imatges/6a.png, id=246, 1005.7575pt x 549.05125pt>
 File: imatges/6a.png Graphic file (type png)
 <use imatges/6a.png>
-Package pdftex.def Info: imatges/6a.png  used on input line 112.
+Package pdftex.def Info: imatges/6a.png  used on input line 115.
 (pdftex.def)             Requested size: 418.25368pt x 228.32118pt.
 <imatges/6b.png, id=247, 852.18375pt x 200.75pt>
 File: imatges/6b.png Graphic file (type png)
 <use imatges/6b.png>
-Package pdftex.def Info: imatges/6b.png  used on input line 114.
+Package pdftex.def Info: imatges/6b.png  used on input line 117.
 (pdftex.def)             Requested size: 418.25368pt x 98.5307pt.
 File: provencana_bw.pdf Graphic file (type pdf)
 <use provencana_bw.pdf>
-Package pdftex.def Info: provencana_bw.pdf  used on input line 118.
+Package pdftex.def Info: provencana_bw.pdf  used on input line 121.
 (pdftex.def)             Requested size: 34.99301pt x 35.0pt.
  [9 <./imatges/6a.png> <./imatges/6b.png>]
 File: provencana_bw.pdf Graphic file (type pdf)
 <use provencana_bw.pdf>
-Package pdftex.def Info: provencana_bw.pdf  used on input line 127.
+Package pdftex.def Info: provencana_bw.pdf  used on input line 130.
 (pdftex.def)             Requested size: 34.99301pt x 35.0pt.
  [10] (./solucio.aux (./portada.aux)
 LaTeX Info: Redefining \. on input line 26.
@@ -467,10 +467,10 @@ Package rerunfilecheck Info: File `solucio.out' has not changed.
 (rerunfilecheck)             Checksum: 565E8CDDBF8D8C408992459494AAFE9F;3424.
  ) 
 Here is how much of TeX's memory you used:
- 10744 strings out of 478238
- 169828 string characters out of 5850456
- 489363 words of memory out of 5000000
- 28797 multiletter control sequences out of 15000+600000
+ 10745 strings out of 478238
+ 169833 string characters out of 5850456
+ 489338 words of memory out of 5000000
+ 28798 multiletter control sequences out of 15000+600000
  475408 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,15n,63p,334b,645s stack positions out of 5000i,500n,10000p,200000b,80000s

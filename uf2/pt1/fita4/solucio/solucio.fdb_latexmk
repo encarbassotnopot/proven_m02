@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1672320629 "/home/eina/Desktop/cicle/m02/uf2/pt1/fita4/solucio/solucio.tex" "solucio.pdf" "solucio" 1672320630
-  "/home/eina/Desktop/cicle/m02/uf2/pt1/fita4/solucio/solucio.tex" 1672320629 4199 68f818d85efe21c7635aa69874588018 ""
+["pdflatex"] 1673298007 "/home/eina/Desktop/cicle/m02/uf2/pt1/fita4/solucio/solucio.tex" "solucio.pdf" "solucio" 1673298008
+  "/home/eina/Desktop/cicle/m02/uf2/pt1/fita4/solucio/solucio.tex" 1673298007 4228 9c2905597eaa8fc9b827109a88461393 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1650183167 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1650183167 1300 63a6111ee6274895728663cf4b4e7e81 ""
@@ -87,14 +87,14 @@
   "imatges/5b.png" 1672316022 12917 62d3b0f56149014e07f4402ce3246fbd ""
   "imatges/6a.png" 1672315842 94086 748668c76dbd11775e3804b72c4bd443 ""
   "imatges/6b.png" 1672316040 18152 8f52a0972f1d2cf358528ec88cb70799 ""
-  "portada.aux" 1672320629 575 210446a4853df118efc1d04cbe667bff "pdflatex"
-  "portada.tex" 1672160980 518 ab151a964a622442a51f7d7483a60787 ""
+  "portada.aux" 1673298008 575 210446a4853df118efc1d04cbe667bff "pdflatex"
+  "portada.tex" 1673297997 510 5339f4f528bdb25dbb1e0e319b343a87 ""
   "provencana_bw.pdf" 1672160980 6596 6fe93f860bb5a9567dd813e77cf54ed9 ""
   "provencana_color.pdf" 1672160980 6639 cf0d10d8632fe44340b3ed183771c02a ""
-  "solucio.aux" 1672320630 4449 c85956a56ba68d1367d2fce2ec974d8a "pdflatex"
-  "solucio.out" 1672320630 3424 565e8cddbf8d8c408992459494aafe9f "pdflatex"
-  "solucio.tex" 1672320629 4199 68f818d85efe21c7635aa69874588018 ""
-  "solucio.toc" 1672320630 2338 f8784c1dea7379554cc9da40d5f87eb8 "pdflatex"
+  "solucio.aux" 1673298008 4449 c85956a56ba68d1367d2fce2ec974d8a "pdflatex"
+  "solucio.out" 1673298008 3424 565e8cddbf8d8c408992459494aafe9f "pdflatex"
+  "solucio.tex" 1673298007 4228 9c2905597eaa8fc9b827109a88461393 ""
+  "solucio.toc" 1673298008 2338 f8784c1dea7379554cc9da40d5f87eb8 "pdflatex"
   (generated)
   "portada.aux"
   "solucio.aux"
