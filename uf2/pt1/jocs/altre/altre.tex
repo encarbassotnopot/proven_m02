@@ -1,0 +1,220 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[spanish]{babel} % Patrons de trencament de paraula
+\usepackage{fancyhdr} % Per la capçalera
+\usepackage{geometry}
+\usepackage{graphicx} % Per importar logos (i altres gràfics)
+\usepackage[colorlinks,linkcolor=black]{hyperref} % Per fer que l'index tingui hiperlinks en el pdf
+\usepackage{indentfirst}
+\usepackage[sc,small]{titlesec} % Seccions personalitzades
+
+%% Títols
+\newcommand{\modulnum}{2}
+\newcommand{\modulnom}{Bases de Dades}
+
+\newcommand{\ufnum}{2}
+\newcommand{\ufnom}{Llenguatges SQL: DML i DDL}
+
+\newcommand{\acttipus}{Juguem al SQL Mistery}
+\newcommand{\actnom}{Olympus}
+
+\newcommand{\autor}{Eina Coma Bages}
+
+%% Entreliniats
+\linespread{1.5}
+
+%% Capçalera
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+\addtolength{\topmargin}{-20pt}
+\fancyhead[L]{\includegraphics*[height=35pt]{provencana_bw.pdf}}
+\fancyhead[R]{
+	{\scshape\scriptsize Mòdul \modulnum: \modulnom}\\
+	{\scshape\footnotesize \acttipus \space  - \actnom}\\
+	{\scshape\small\autor}}
+
+\addtolength{\textheight}{2cm}
+
+%% Comandes personalitzades
+\newcommand{\mygraphic}[2][width=\textwidth]{\begin{center}
+		\centering\includegraphics[#1]{#2}\par
+\end{center}}
+
+\renewcommand{\contentsname}{Índex}
+
+\begin{document}
+\include{portada.tex}
+\section{Part inicial}
+\textsc{1. Quin és el teu nom i cognoms?}
+
+Eina Coma Bages
+
+\textsc{2. Quin és el nom del grup del SQL Mistery al que jugues?}
+
+Olympus 
+
+\textsc{3. Quin és el punt de partida:}
+\begin{itemize}
+	\item \textsc{Què et demanen resoldre? Quina és la pregunta que has de respondre?}
+	
+	Qui ha regalat un número de loteria a cada casa del poble?	
+
+	\item \textsc{Quina informació/dada inicial et donen per començar la investigació?}
+
+	En un poble de 150 habitants algú ha deixat un número de loteria a cada casa. La notícia és d'una setmana abans del sorteig del sorteig del "Gordo de Navidad", celebrat el 22 de desembre del 2002.
+
+\end{itemize}
+
+\newpage
+\section{Part intermitja}
+
+\subsection{Primera Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/1.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/2.png}
+
+\subsubsection{Interpretació de les dades}
+Revisem la notícia per veure si podem treure més informació, però no ha estat així.
+
+\subsubsection{Següent pas}
+Passem a buscar quins pobles tenen 150 habitants.
+
+\newpage
+\subsection{Segona Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/3.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/4.png}
+
+\subsubsection{Interpretació de les dades}
+Hi ha un total de sis pobles amb 150 habitants.
+
+\subsubsection{Següent pas}
+Intentem esbrinar a quin poble ha passat mirant les entrevistes.
+
+\newpage
+\subsection{Tercera Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/5.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/6.png}
+
+\subsubsection{Interpretació de les dades}
+Comprovem que el poble on ha tocat, és Wein. El número guanyador és el 17421.
+
+També algú diu que el "misteriós Pare Noel" viu a la primera casa.
+
+\subsubsection{Següent pas}
+Podem fer dues coses, consultar qui va vendre el número o trucar a la porta de la casa. Començem amb la segona opció
+
+\newpage
+\subsection{Quarta Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/7.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/8.png}
+
+\subsubsection{Interpretació de les dades}
+Hi viu una persona amb l'id 228.
+
+\subsubsection{Següent pas}
+Busquem si ha dit alguna cosa.
+
+\newpage
+\subsection{Cinquena Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/9.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/10.png}
+
+\subsubsection{Interpretació de les dades}
+Sabem que no ha estat cosa d'aquesta persona, però potser el seu fill hi té alguna cosa a veure.
+
+\subsubsection{Següent pas}
+Tornem enrere per consultar qui va vendre el número afortunat.
+
+\newpage
+\subsection{Sisena Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/11.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/12.png}
+
+\subsubsection{Interpretació de les dades}
+L'ha venut un tal Carter Verdon, amb l'id de 5.
+
+\subsubsection{Següent pas}
+Consultem si té alguna entrevista.
+
+\newpage
+\subsection{Setena consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/13.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/14.png}
+
+\subsubsection{Interpretació de les dades}
+El va vendre a un home amb un nom que començava per D, estava casat i tenia entre 30 i 40 anys.
+
+\subsubsection{Següent pas}
+Busquem si algú encaixa en aquest perfil.
+
+\newpage
+\subsection{Vuitena Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/15.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/16.png}
+
+\subsubsection{Interpretació de les dades}
+Tenim dos sospitosos, però el primer ja l'havíem descartat anteriorment. Queda només en David Ring.
+
+\subsubsection{Següent pas}
+Per comprovar si hem trobat al Pare Noel de Wein, fem un join amb les entrevistes.
+
+\newpage
+\subsection{Novena Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/17.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/18.png}
+
+\subsubsection{Interpretació de les dades}
+Com confirma en l'entrevista, en David Ring és qui va regalar un dècim a totes les cases de Wein.
+
+\newpage
+\section{Part final}
+
+\textsc{6. Has aconseguit resoldre el SQL Mystery (Sí/No)? Quina és la teva solució final al Mystery?}
+
+L'he resolt, qui ha regalat un número de loteria a totes les cases ha estat en David Ring.
+
+\textsc{7. En una escala de l’1 al 10, t’ho has passat bé? Ha estat divertit?}
+
+10, ha estat molt divertit.
+
+\textsc{8. En una escala de l’1 al 10, quan has après resolent aquest SQL Mystery?}
+
+1
+
+\end{document}

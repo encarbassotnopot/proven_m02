@@ -1,0 +1,150 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[spanish]{babel} % Patrons de trencament de paraula
+\usepackage{fancyhdr} % Per la capçalera
+\usepackage{geometry}
+\usepackage{graphicx} % Per importar logos (i altres gràfics)
+\usepackage[colorlinks,linkcolor=black]{hyperref} % Per fer que l'index tingui hiperlinks en el pdf
+\usepackage{indentfirst}
+\usepackage[sc,small]{titlesec} % Seccions personalitzades
+
+%% Títols
+\newcommand{\modulnum}{2}
+\newcommand{\modulnom}{Bases de Dades}
+
+\newcommand{\ufnum}{2}
+\newcommand{\ufnom}{Llenguatges SQL: DML i DDL}
+
+\newcommand{\acttipus}{Juguem al SQL Mistery}
+\newcommand{\actnom}{La Caixa Forta de la Mort}
+
+\newcommand{\autor}{Eina Coma Bages}
+
+%% Entreliniats
+\linespread{1.5}
+
+%% Capçalera
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+\addtolength{\topmargin}{-20pt}
+\fancyhead[L]{\includegraphics*[height=35pt]{provencana_bw.pdf}}
+\fancyhead[R]{
+	{\scshape\scriptsize Mòdul \modulnum: \modulnom}\\
+	{\scshape\footnotesize \acttipus \space  - \actnom}\\
+	{\scshape\small\autor}}
+
+\addtolength{\textheight}{2cm}
+
+%% Comandes personalitzades
+\newcommand{\mygraphic}[2][width=\textwidth]{\begin{center}
+		\centering\includegraphics[#1]{#2}\par
+\end{center}}
+
+\renewcommand{\contentsname}{Índex}
+
+\begin{document}
+\include{portada.tex}
+\section{Part inicial}
+\textsc{1. Quin és el teu nom i cognoms?}
+
+Eina Coma Bages
+
+\textsc{2. Quin és el nom del grup del SQL Mistery al que jugues?}
+
+El meu 
+
+\textsc{3. Quin és el punt de partida:}
+\begin{itemize}
+	\item \textsc{Què et demanen resoldre? Quina és la pregunta que has de respondre?}
+	
+	Qui ha comès el robatori?	
+
+	\item \textsc{Quina informació/dada inicial et donen per començar la investigació?}
+
+	Cada divendres a les 15 hores, una empresa obre la seva caixa forta per fer un recompte dels diners.
+
+	El divendres 18 de març del 2022, en un recompte ordinari, van descobrir que faltava una bona part dels diners.
+	
+\end{itemize}
+
+\newpage
+\section{Part intermitja}
+
+\subsection{Primera Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/1.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/2.png}
+
+\subsubsection{Interpretació de les dades}
+
+\subsubsection{Següent pas}
+
+\subsection{Segona Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/3.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/4.png}
+
+\subsubsection{Interpretació de les dades}
+
+\subsubsection{Següent pas}
+
+\subsection{Tercera Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/5.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/6.png}
+
+\subsubsection{Interpretació de les dades}
+
+\subsubsection{Següent pas}
+
+\subsection{Quarta Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/7.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/8.png}
+
+\subsubsection{Interpretació de les dades}
+
+\subsubsection{Següent pas}
+
+\subsection{Cinquena Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/9.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/10.png}
+
+\subsubsection{Interpretació de les dades}
+
+\subsubsection{Següent pas}
+
+\subsection{Sisena Consulta}
+
+\subsubsection{Consulta SQL}
+\mygraphic{imatges/11.png}
+
+\subsubsection{Dades obtingudes}
+\mygraphic{imatges/12.png}
+
+\subsubsection{Interpretació de les dades}
+
+\subsubsection{Següent pas}
+
+\newpage
+\section{Part final}
+
+
+\end{document}
