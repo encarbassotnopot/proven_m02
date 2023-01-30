@@ -1,0 +1,257 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[spanish]{babel} % Patrons de trencament de paraula
+\usepackage{fancyhdr} % Per la capçalera
+\usepackage{geometry}
+\usepackage{graphicx} % Per importar logos (i altres gràfics)
+\usepackage[colorlinks,linkcolor=black]{hyperref} % Per fer que l'index tingui hiperlinks en el pdf
+\usepackage{indentfirst}
+\usepackage[sc,small]{titlesec} % Seccions personalitzades
+\usepackage{listings,xcolor} % Codi
+
+%% Títols
+\newcommand{\modulnum}{2}
+\newcommand{\modulnom}{Bases de Dades}
+
+\newcommand{\ufnum}{3}
+\newcommand{\ufnom}{DCL i extensió prodedimental (PL/SQL)}
+
+\newcommand{\acttipus}{Pràctica 1.1}
+\newcommand{\actnom}{Administració dusuaris a Oracle}
+
+\newcommand{\autor}{Pirates del Carib}
+
+%% Entreliniats
+\linespread{1.5}
+
+%% Capçalera
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+\addtolength{\topmargin}{-20pt}
+\fancyhead[L]{\includegraphics*[height=35pt]{provencana_bw.pdf}}
+\fancyhead[R]{
+	{\scshape\scriptsize Mòdul \modulnum: \modulnom}\\
+	{\scshape\footnotesize \acttipus \space  - \actnom}\\
+	{\scshape\small\autor}}
+
+\addtolength{\textheight}{2cm}
+
+%% Format Codi
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle} {
+	backgroundcolor=\color{backcolour},
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=true,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=4
+}
+
+\lstset{style=mystyle}
+
+
+%% Comandes personalitzades
+\newcommand{\mygraphic}[2][width=\textwidth]{\begin{center}
+		\centering\includegraphics[#1]{#2}\par
+\end{center}}
+
+\renewcommand{\contentsname}{Índex}
+
+\begin{document}
+\include{portada.tex}
+
+\textsc{1. Crea un usuari <elteunom>1 (per exemple pedro1) amb autenticació de contrasenya. Assigna-li el privilegi d'inici de sessió.}
+
+\begin{lstlisting}[language=SQL]
+CREATE USER eina1 IDENTIFIED BY contrasenya;
+GRANT CREATE SESSION TO eina1;
+\end{lstlisting}
+\mygraphic{imatges/1a.png}
+\mygraphic{imatges/1b.png}
+
+\newpage
+\textsc{2. Entra com <elteunom>1 i canviar-li la contrasenya a clave1.}
+\begin{lstlisting}[language=SQL]
+CONNECT EINA1/contrasenya;
+ALTER USER EINA1 IDENTIFIED BY clave1;
+\end{lstlisting}
+\mygraphic{imatges/2.png}
+
+\textsc{3. Bloqueja el compte <elteunom>1.}
+\begin{lstlisting}[language=SQL]
+ALTER USER EINA1 ACCOUNT LOCK;
+\end{lstlisting}
+\mygraphic{imatges/3.png}
+
+\newpage
+\textsc{4. Desbloqueja el compte <elteunom>1.}
+\begin{lstlisting}[language=SQL]
+ALTER USER EINA1 ACCOUNT UNLOCK;
+\end{lstlisting}
+\mygraphic{imatges/4.png}
+
+\textsc{5. Assigna privilegis a <elteunom>1 per poder connectar, crear taules, crear vistes, crear seqüències i crear tipus. Permet que <elteunom>1 pugui assignar aquests privilegis a altres usuaris.}
+\begin{lstlisting}[language=SQL]
+GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE SEQUENCE, CREATE TYPE TO EINA1 WITH ADMIN OPTION;
+\end{lstlisting}
+\mygraphic{imatges/5.png}
+
+\textsc{6. Revoca tots els privilegis a <elteunom>1.}
+\begin{lstlisting}[language=SQL]
+REVOKE CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE SEQUENCE, CREATE TYPE FROM EINA1;
+\end{lstlisting}
+\mygraphic{imatges/6.png}
+
+\textsc{7. Assigna els privilegis INSERT, UPDATE, DELETE i SELECT per la taula emp a <elteunom>1. (La taula emp està a l'esquema scott)}
+\begin{lstlisting}[language=SQL]
+GRANT SELECT, INSERT, UPDATE, DELETE ON scott.emp TO EINA1;
+\end{lstlisting}
+\mygraphic{imatges/7.png}
+
+\textsc{8. Assigna tots els privilegis per la taula dept a <elteunom>1 incloent que pugui assignar aquests privilegis a altres usuaris.}
+\begin{lstlisting}[language=SQL]
+GRANT ALL ON scott.dept TO EINA1;
+\end{lstlisting}
+\mygraphic{imatges/8.png}
+
+\textsc{9. Volem que un usuari anomenat <elteunom>2 (s'ha de crear), amb contrasenya clave2, solament pugui fer INSERT a les columnes (empno, ename) UPDATE a les columnes (hiredate, sal) i REFERENCES a la columna (empno) i SELECT a totes.}
+\begin{lstlisting}[language=SQL]
+CREATE USER EINA2 IDENTIFIED BY CLAVE2;
+GRANT INSERT(EMPNO, ENAME), REFERENCES(EMPNO), SELECT ON SCOTT.EMP TO EINA2;
+\end{lstlisting}
+\mygraphic{imatges/9a.png}
+\mygraphic{imatges/9b.png}
+
+\newpage
+\textsc{10. Revoca el privilegi REFERENCES a <elteunom>2.}
+\begin{lstlisting}[language=SQL]
+REVOKE REFERENCES ON SCOTT.EMP FROM EINA2;
+\end{lstlisting}
+\mygraphic{imatges/10.png}
+
+\textsc{11. Crea un rol pels programadors d'aplicacions del sistema anomenat progapps amb contrasenya sistema.}
+\begin{lstlisting}[language=SQL]
+CREATE ROLE progapps IDENTIFIED BY sistema;
+\end{lstlisting}
+\mygraphic{imatges/11.png}
+
+\textsc{12. Assigna els privilegis de sistema CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE ANY INDEX, CREATE SEQUENCE, CREATE TYPE rol progapps creat en el punt anterior.}
+\begin{lstlisting}[language=SQL]
+GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE ANY INDEX, CREATE SEQUENCE, CREATE TYPE TO progapps;
+\end{lstlisting}
+\mygraphic{imatges/12.png}
+
+\newpage
+\textsc{13. Assigna privilegis d'objecte INSERT, UPDATE, DELETE, SELECT sobre la taula emp al rol progapps.}
+\begin{lstlisting}[language=SQL]
+GRANT INSERT, UPDATE, DELETE, SELECT ON SCOTT.EMP TO PROGAPPS;
+\end{lstlisting}
+\mygraphic{imatges/13.png}
+
+\textsc{14. Assigna el rol progapps a <elteunom>2.}
+\begin{lstlisting}[language=SQL]
+GRANT PROGAPPS TO EINA2;
+\end{lstlisting}
+\mygraphic{imatges/14.png}
+
+\newpage
+\textsc{15. Assigna el rol progapps a <elteunom>1.}
+\begin{lstlisting}[language=SQL]
+GRANT PROGAPPS TO EINA1;
+\end{lstlisting}
+\mygraphic{imatges/15.png}
+
+\textsc{16. Crea un perfil perfildeprova amb els límits de recursos següents:}
+\begin{itemize}
+	\item Màxim de 5 sessions de base de dades concurrents obertes.
+	\item CPU per sessió il·limitada.
+	\item CPU per petició de base de dades 30 segons.
+	\item Temps de connexió activa il·limitat.
+	\item Estar inactiu durant un temps màxim de 30 minuts.
+	\item Lectures lògiques per sessió il·limitades.
+	\item Lectures lògiques per petició 1000.
+\end{itemize}
+\begin{lstlisting}[language=SQL]
+CREATE PROFILE PERFILDEPROVA LIMIT
+	SESSIONS_PER_USER 5
+	CPU_PER_SESSION UNLIMITED
+	CPU_PER_CALL 3000
+	CONNECT_TIME UNLIMITED
+	IDLE_TIME 30
+	LOGICAL_READS_PER_SESSION UNLIMITED
+	LOGICAL_READS_PER_CALL 1000;
+\end{lstlisting}
+\mygraphic{imatges/16.png}
+
+\textsc{17. Modifica el perfil anterior ajustant la contrasenya d'administració a:}
+\begin{itemize}
+	\item Bloquejar el compte després de 3 intents consecutius sense èxit.
+	\item Si es bloqueja el compte, mantenir-lo bloquejat durant tot el dia.
+	\item Temps de vida per la contrasenya de 30 dies més un període de gràcia de 5 dies.
+	\item El perfil d'usuari no pot tornar a utilitzar la contrasenya antiga.
+\end{itemize}
+\begin{lstlisting}[language=SQL]
+ALTER PROFILE PERFILDEPROVA LIMIT
+	FAILED_LOGIN_ATTEMPTS 3
+	PASSWORD_LOCK_TIME 1
+	PASSWORD_LIFE_TIME 30
+	PASSWORD_GRACE_TIME 5
+	PASSWORD_REUSE_MAX 1;
+\end{lstlisting}
+\mygraphic{imatges/17.png}
+
+\textsc{18. Provoca que caduqui la contrasenya de <elteunom>2.}
+\begin{lstlisting}[language=SQL]
+ALTER USER eina2 PASSWORD EXPIRE;
+\end{lstlisting}
+\mygraphic{imatges/18.png}
+
+\newpage
+\textsc{19. Assigna a <elteunom>1 el perfil perfildeprova.}
+\begin{lstlisting}[language=SQL]
+ALTER USER eina1 PROFILE perfildeprova;
+\end{lstlisting}
+\mygraphic{imatges/19.png}
+
+\textsc{20. Deshabilita l'administració de contrasenyes pel perfil predeterminat de la base de dades.}
+\begin{lstlisting}[language=SQL]
+TODO;
+\end{lstlisting}
+
+\newpage
+\textsc{21. Mostra informació sobre els usuaris <elteunom>1 i <elteunom>2.}
+\begin{lstlisting}[language=SQL]
+SELECT * FROM DBA_USERS WHERE USERNAME IN ('EINA1', 'EINA2');
+\end{lstlisting}
+\mygraphic{imatges/21.png}
+
+\textsc{22. Mostra informació sobre el rol progapps.}
+\begin{lstlisting}[language=SQL]
+SELECT * FROM DBA_ROLES WHERE ROLE = 'PROGAPPS';
+\end{lstlisting}
+\mygraphic{imatges/22.png}
+
+\newpage
+\textsc{23. Mostra informació sobre el perfil perfildeprova.}
+\begin{lstlisting}[language=SQL]
+SELECT * FROM DBA_PROFILES WHERE PROFILE = 'PERFILDEPROVA';
+\end{lstlisting}
+\mygraphic{imatges/23.png}
+
+\end{document}
