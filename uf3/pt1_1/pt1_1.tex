@@ -20,7 +20,7 @@
 \newcommand{\acttipus}{Pràctica 1.1}
 \newcommand{\actnom}{Administració dusuaris a Oracle}
 
-\newcommand{\autor}{Pirates del Carib}
+\newcommand{\autor}{Eina Coma Bages}
 
 %% Entreliniats
 \linespread{1.5}
@@ -229,10 +229,18 @@ ALTER USER eina1 PROFILE perfildeprova;
 \end{lstlisting}
 \mygraphic{imatges/19.png}
 
+\newpage
 \textsc{20. Deshabilita l'administració de contrasenyes pel perfil predeterminat de la base de dades.}
 \begin{lstlisting}[language=SQL]
-TODO;
+ALTER PROFILE default LIMIT
+	FAILED_LOGIN_ATTEMPTS UNLIMITED
+	PASSWORD_LOCK_TIME UNLIMITED
+	PASSWORD_LIFE_TIME UNLIMITED
+	PASSWORD_GRACE_TIME UNLIMITED
+	PASSWORD_REUSE_TIME UNLIMITED
+	PASSWORD_REUSE_MAX UNLIMITED;
 \end{lstlisting}
+\mygraphic{imatges/20.png}
 
 \newpage
 \textsc{21. Mostra informació sobre els usuaris <elteunom>1 i <elteunom>2.}
